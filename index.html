@@ -1,195 +1,389 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gowyiow Skincare - Home</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans:wght@400;500;700&family=Noto+Serif:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Gowyiow Skincare & Salon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script>
         tailwind.config = {
+            darkMode: "class",
             theme: {
                 extend: {
+                    colors: {
+                        "primary": "#e44451",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#211113",
+                    },
                     fontFamily: {
-                        sans: ['Manrope', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    }
-                }
-            }
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
         }
     </script>
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/components.js" defer></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/main.js" defer></script>
 </head>
-<body class="bg-[#fcf8f9] text-[#1b0e11] antialiased">
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-200">
     <!-- Quick Contact Bar -->
-    <div class="bg-[#ea3e69]/5 text-slate-700 py-2 text-sm text-center border-b border-[#ea3e69]/10">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-center items-center gap-4 px-4">
-            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px] text-[#ea3e69]">call</span> +123 456 7890</span>
-            <span class="hidden sm:inline text-[#ea3e69]/30">|</span>
-            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px] text-[#ea3e69]">chat</span> WhatsApp Available</span>
-            <span class="hidden sm:inline text-[#ea3e69]/30">|</span>
-            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px] text-[#ea3e69]">location_on</span> Tombura Location</span>
+    <div class="bg-primary/5 dark:bg-primary/20 text-slate-700 dark:text-slate-200 py-2 text-sm text-center border-b border-primary/10">
+        <div class="layout-container flex flex-col sm:flex-row justify-center items-center gap-4 px-4">
+            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px] text-primary">call</span> +123 456 7890</span>
+            <span class="hidden sm:inline text-primary/30">|</span>
+            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px] text-primary">chat</span> WhatsApp Available</span>
+            <span class="hidden sm:inline text-primary/30">|</span>
+            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px] text-primary">location_on</span> Tombura Location</span>
         </div>
     </div>
-
-    <app-header></app-header>
-
-    <main>
-        <!-- Hero Section -->
-        <div class="relative w-full h-[600px] flex items-center justify-center overflow-hidden">
-            <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCNjZl7HEABPfeHxDPxk8CXUsFDofuX8VhL6jFmay_xdxQdjpf0I4jrLNY9IZR_aURCoOQlXeccrUbj-84yJB48nMp1QRj0HLtDlVjEyFPYFQQmBPqA_bZWy-INXRgAL6j7A7B_riflrfSgAc-DBc1tJgT78rodj-BJ6FFxAD4aokbV-xzyjeThFojWjC6enCT-8n3QLsPl6EmrKokhoWXmM7FRBGddsyupnA1jimXhQl4fFqmXuVhftgZTDkpyvruBNON7OO_1DIIO')">
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-primary/10">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-8 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="size-8 text-primary">
+                    <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <h1 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">Gowyiow Skincare</h1>
             </div>
-            <div class="absolute inset-0 bg-gradient-to-r from-[#211113]/80 to-[#211113]/30"></div>
-            <div class="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center gap-6">
-                <span class="text-sm font-bold uppercase tracking-widest bg-[#ea3e69]/20 px-3 py-1 rounded-full backdrop-blur-sm text-white border border-white/20">Premium Wellness</span>
-                <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight drop-shadow-sm font-serif">
-                    Reveal Your Natural Beauty <br />
-                    <span class="font-light italic text-[#ea3e69]/90">at Gowyiow Skincare & Salon</span>
-                </h1>
-                <p class="text-lg md:text-xl text-slate-200 max-w-2xl font-light">
-                    Experience luxury skincare and professional beauty treatments designed to rejuvenate your body and soul.
+            <nav class="hidden md:flex gap-8 items-center">
+                <a class="text-sm font-medium text-primary transition-colors" href="./index.html">Home</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="./about.html">About</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="./services.html">Services</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="./gallery.html">Gallery</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="./contact.html">Contact</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <button class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-xl text-sm font-bold transition-transform hover:scale-105 shadow-lg shadow-primary/20">
+                    Book Now
+                </button>
+                <button class="md:hidden text-slate-900 dark:text-white">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <div class="relative w-full h-[600px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCNjZl7HEABPfeHxDPxk8CXUsFDofuX8VhL6jFmay_xdxQdjpf0I4jrLNY9IZR_aURCoOQlXeccrUbj-84yJB48nMp1QRj0HLtDlVjEyFPYFQQmBPqA_bZWy-INXRgAL6j7A7B_riflrfSgAc-DBc1tJgT78rodj-BJ6FFxAD4aokbV-xzyjeThFojWjC6enCT-8n3QLsPl6EmrKokhoWXmM7FRBGddsyupnA1jimXhQl4fFqmXuVhftgZTDkpyvruBNON7OO_1DIIO');"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-background-dark/80 to-background-dark/30"></div>
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center gap-6">
+            <span class="text-white text-sm font-bold uppercase tracking-widest bg-primary/20 px-3 py-1 rounded-full backdrop-blur-sm border border-white/20">Premium Wellness</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight drop-shadow-sm">
+                Reveal Your Natural Beauty <br/>
+                <span class="font-light italic text-primary/90">at Gowyiow Skincare &amp; Salon</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-200 max-w-2xl font-light">
+                Experience luxury skincare and professional beauty treatments designed to rejuvenate your body and soul.
+            </p>
+            <div class="flex flex-wrap gap-4 justify-center mt-4">
+                <button class="bg-primary hover:bg-primary/90 text-white h-12 px-8 rounded-xl text-base font-bold shadow-xl shadow-primary/30 transition-all hover:-translate-y-0.5">
+                    Book Appointment
+                </button>
+                <button class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white h-12 px-8 rounded-xl text-base font-bold transition-all hover:-translate-y-0.5 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-[20px]">chat</span>
+                    Chat on WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- About Section -->
+    <section class="py-20 px-4 sm:px-8 max-w-[1280px] mx-auto">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="relative">
+                <div class="absolute -inset-4 bg-primary/10 rounded-2xl rotate-3"></div>
+                <div class="relative aspect-[4/3] rounded-xl overflow-hidden shadow-2xl">
+                    <img alt="Esthetician applying facial treatment mask" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8ocmFyetgFJAwvS0zTXr8Ykn9JVobpeQ-6bANCgrxSb030HJXnQ_cMgtYYtzbxYvzWHQeR5pghnRVXCrbd04i8KUgEOEa5Q0YP5ENpqoSadUioV0B2GO18lLK8OGDc_j2zw642tj9aHj0UCurMFbqN_RtwTrhiOC6KUzUSMGWvpmlY9wObUgHcVOcz8chH-Dd-HyEJ9eu-el2kX7hz0M2KbO0zNOnlN0VopjQ4HeLHoMYD7Qkx9Vksc75ohi_CbcAWzg4p6qps1fi"/>
+                </div>
+                <div class="absolute -bottom-6 -right-6 bg-white dark:bg-background-dark p-6 rounded-xl shadow-xl border border-primary/10 max-w-[200px]">
+                    <p class="text-4xl font-bold text-primary">10+</p>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 font-medium">Years of Excellence in Skincare</p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-6">
+                <div class="flex items-center gap-2 text-primary font-bold tracking-wider text-sm uppercase">
+                    <span class="w-8 h-[2px] bg-primary"></span> About Us
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white leading-tight">
+                    Trusted Beauty &amp; Skincare Experts
+                </h2>
+                <p class="text-slate-600 dark:text-slate-300 text-lg leading-relaxed">
+                    At Gowyiow, we combine advanced skincare technology with a relaxing atmosphere to rejuvenate your skin and enhance your natural glow. Our dedicated team of professionals is committed to providing personalized treatments that cater to your unique needs.
                 </p>
-                <div class="flex flex-wrap gap-4 justify-center mt-4">
-                    <a href="/pages/contact.html" class="bg-[#ea3e69] hover:bg-[#d12a52] text-white h-12 px-8 rounded-xl text-base font-bold shadow-xl shadow-[#ea3e69]/30 transition-all hover:-translate-y-0.5 flex items-center justify-center">
-                        Book Appointment
-                    </a>
-                    <a href="#" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white h-12 px-8 rounded-xl text-base font-bold transition-all hover:-translate-y-0.5 flex items-center gap-2">
-                        <span class="material-symbols-outlined text-[20px]">chat</span>
-                        Chat on WhatsApp
-                    </a>
+                <ul class="flex flex-col gap-3 mt-2">
+                    <li class="flex items-center gap-3 text-slate-700 dark:text-slate-200">
+                        <span class="material-symbols-outlined text-primary">check_circle</span>
+                        Certified Dermatologists &amp; Stylists
+                    </li>
+                    <li class="flex items-center gap-3 text-slate-700 dark:text-slate-200">
+                        <span class="material-symbols-outlined text-primary">check_circle</span>
+                        Organic &amp; Premium Products
+                    </li>
+                    <li class="flex items-center gap-3 text-slate-700 dark:text-slate-200">
+                        <span class="material-symbols-outlined text-primary">check_circle</span>
+                        State-of-the-art Equipment
+                    </li>
+                </ul>
+                <a href="./about.html" class="mt-4 text-primary font-bold hover:text-primary/80 flex items-center gap-1 w-fit group">
+                    Learn More About Us 
+                    <span class="material-symbols-outlined transition-transform group-hover:translate-x-1 text-[20px]">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Services Grid -->
+    <section class="py-20 bg-primary/5 dark:bg-background-dark border-y border-primary/5">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-primary font-bold tracking-wider text-sm uppercase mb-2 block">Our Menu</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">Our Exclusive Services</h2>
+                <p class="text-slate-600 dark:text-slate-400">Discover a range of treatments designed to relax, restore, and revitalize.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="group bg-white dark:bg-[#2a1a1c] rounded-2xl p-6 shadow-sm hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 border border-transparent hover:border-primary/20">
+                    <div class="h-48 rounded-xl overflow-hidden mb-6 relative">
+                        <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors z-10"></div>
+                        <img alt="Woman relaxing with facial mask" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWWpOBDxD9Sje2i_PVCib3Y2fbjCnCYqt-ahWMSFPN34GRd-0JvjG3qNMQE97Nc6eVpGHhI1PPO2_kZfQc3-PH_s-AVH4HEfooNHiVEFqBhW4OXPw-2aDpnDdP6eu4Yyz3w_QcixkuF1iK3rxtEjQnnT5Wu1rzqdBZewj5Aw_n86kK--emCd0mgC18tk9s68k8nmHnkMXjdPdYVleEp1HIcMS2eKfQvdza4o-dMZfe4nX4BmFqBgiy0vKU8DI95puvrht1qik9OAvn"/>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Signature Facials</h3>
+                    <p class="text-slate-600 dark:text-slate-400 mb-4 line-clamp-3">Deep cleansing and hydration treatments tailored to your specific skin type for a radiant glow.</p>
+                    <a class="inline-flex items-center text-primary font-semibold text-sm hover:underline" href="./services.html">View Details</a>
+                </div>
+                <!-- Service 2 -->
+                <div class="group bg-white dark:bg-[#2a1a1c] rounded-2xl p-6 shadow-sm hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 border border-transparent hover:border-primary/20">
+                    <div class="h-48 rounded-xl overflow-hidden mb-6 relative">
+                        <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors z-10"></div>
+                        <img alt="Hair styling session" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKlaZHB1nzImWTjTHhl-H5PuP_IUU0toFIIXaZotkhY_dHjTg624dcLX7TyKyn93WQ5nEDoURGolFFk44RHxU7R-3PITLRs6YkLiIi6e_G0103LLSY0w26KaWEBbBFZl4JN2Nal_mafAONfu5y4DBZ03KDUXtTqgZ5e_0il_D7AtFBq8IftIbbz100B-avaOrhSx_vTitA4q0vx7lUnXXfUYOQXtWU8yAQiysNpFPYnxcUiSrVz9d0yNcpJmZmfKv25tSEGgklizEi"/>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Hair Styling &amp; Care</h3>
+                    <p class="text-slate-600 dark:text-slate-400 mb-4 line-clamp-3">From cuts and colors to deep conditioning treatments, let our experts transform your look.</p>
+                    <a class="inline-flex items-center text-primary font-semibold text-sm hover:underline" href="./services.html">View Details</a>
+                </div>
+                <!-- Service 3 -->
+                <div class="group bg-white dark:bg-[#2a1a1c] rounded-2xl p-6 shadow-sm hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 border border-transparent hover:border-primary/20">
+                    <div class="h-48 rounded-xl overflow-hidden mb-6 relative">
+                        <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors z-10"></div>
+                        <img alt="Manicure and nail art" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqumsN_YVTwOJDVybSfb42wBOZOmVXBr8X1zdlMOZFUv0RlBU3YkdtC-YIoukFTrZYUo_Jowb9vNv4mdtb2iVQ91uFTPCTHrkGhqc-4Zw1YTylowB2Ku-ZjrN0rT20tvbtmrPGT67egQmLvw_hOlZbHmTsGGn4gWgLcm5MFZoY89Zs4caH5R9ntkbbxlY_rZANKn0TXKelvkZho0RrzJGnzwYs4Hmj2tfMDbZIAzEN0-2G4s3Q0n1kZYixzYIs6J4qQEBJvcrt4i1j"/>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Nail Artistry</h3>
+                    <p class="text-slate-600 dark:text-slate-400 mb-4 line-clamp-3">Pamper your hands and feet with our luxurious manicures, pedicures, and nail art services.</p>
+                    <a class="inline-flex items-center text-primary font-semibold text-sm hover:underline" href="./services.html">View Details</a>
                 </div>
             </div>
         </div>
-
-        <!-- About Section -->
-        <section class="py-20 px-4 sm:px-8 max-w-7xl mx-auto">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="relative">
-                    <div class="absolute -inset-4 bg-[#ea3e69]/10 rounded-2xl rotate-3"></div>
-                    <div class="relative aspect-[4/3] rounded-xl overflow-hidden shadow-2xl">
-                        <img alt="Esthetician applying facial treatment mask" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8ocmFyetgFJAwvS0zTXr8Ykn9JVobpeQ-6bANCgrxSb030HJXnQ_cMgtYYtzbxYvzWHQeR5pghnRVXCrbd04i8KUgEOEa5Q0YP5ENpqoSadUioV0B2GO18lLK8OGDc_j2zw642tj9aHj0UCurMFbqN_RtwTrhiOC6KUzUSMGWvpmlY9wObUgHcVOcz8chH-Dd-HyEJ9eu-el2kX7hz0M2KbO0zNOnlN0VopjQ4HeLHoMYD7Qkx9Vksc75ohi_CbcAWzg4p6qps1fi" />
+    </section>
+    <!-- Why Choose Us -->
+    <section class="py-20 max-w-[1280px] mx-auto px-4 sm:px-8">
+        <div class="flex flex-col md:flex-row gap-12 items-center">
+            <div class="flex-1 flex flex-col gap-8">
+                <div class="flex items-center gap-2 text-primary font-bold tracking-wider text-sm uppercase">
+                    <span class="w-8 h-[2px] bg-primary"></span> Why Choose Us
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Experience the Difference</h2>
+                <div class="flex flex-col gap-8">
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-primary text-2xl">spa</span>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Premium Products</h4>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm">We only use top-tier, dermatologically tested products safe for all skin types.</p>
+                        </div>
                     </div>
-                    <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-xl border border-[#ea3e69]/10 max-w-[200px]">
-                        <p class="text-4xl font-bold text-[#ea3e69] font-serif">10+</p>
-                        <p class="text-sm text-slate-600 font-medium">Years of Excellence in Skincare</p>
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-primary text-2xl">sanitizer</span>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Top Hygiene Standards</h4>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm">Your safety is our priority. All equipment is sterilized, and we maintain a pristine environment.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-primary text-2xl">workspace_premium</span>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Expert Professionals</h4>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm">Our team consists of certified and experienced estheticians and stylists.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="flex flex-col gap-6">
-                    <div class="flex items-center gap-2 text-[#ea3e69] font-bold tracking-wider text-sm uppercase">
-                        <span class="w-8 h-[2px] bg-[#ea3e69]"></span> About Us
+            </div>
+            <div class="flex-1 w-full">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-4 mt-8">
+                        <img alt="Spa massage therapy" class="rounded-2xl w-full h-48 object-cover shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVnntv1XNAzdOjLGnyAP_qO-fLdx9_7pTis0IhHVtTPuVHldpz5Wtiqupm6IZBFwequxM7O1pGSHxFjgseRhd-RuSNq868y7PZiMSeAuN-Npj4NF8BTodOcETQmJQ-KT05FO2d8JDkJPBYcBtj0C8QwLgOuFf4iCkZXBwSDoJad4bnbA5U4yCiF-XkXMteMEkDHEaBmG8GB_kvHig79bgmGq4sbdpkaDjkCgayAiSa3AvQ0vgzRPIdqgKACl_88PdSoZeHtl6cBs0n"/>
+                        <img alt="Skincare products display" class="rounded-2xl w-full h-64 object-cover shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAl7nILfyEYpWyPh1bj7nl6Rjrea1-EP_g8PHq1ivu1geTX8VNi8iRWelgRgY9YqdNuZ7clcQ2o8ymsElVY_PIJkDh7a0CMECPqoUnbNcYuns0eeFFRXGDQLnasdjdVeEOnXZBKvoEmTT047vJKdML8WYmalBau-hmiJU2q3HhsoR2SkojfnxLDxEO_huRIs997b8wX8cmDzSLA8gHjPWzYpEZjUk9qmE4V0Iw-kaFykpoSrUXMr0f7imlqfmjK95Afs4blPfl42LpC"/>
                     </div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 leading-tight font-serif">
-                        Trusted Beauty & Skincare Experts
-                    </h2>
-                    <p class="text-slate-600 text-lg leading-relaxed">
-                        At Gowyiow, we combine advanced skincare technology with a relaxing atmosphere to rejuvenate your skin and enhance your natural glow. Our dedicated team of professionals is committed to providing personalized treatments that cater to your unique needs.
-                    </p>
-                    <ul class="flex flex-col gap-3 mt-2">
-                        <li class="flex items-center gap-3 text-slate-700">
-                            <span class="material-symbols-outlined text-[#ea3e69]">check_circle</span>
-                            Certified Dermatologists & Stylists
-                        </li>
-                        <li class="flex items-center gap-3 text-slate-700">
-                            <span class="material-symbols-outlined text-[#ea3e69]">check_circle</span>
-                            Organic & Premium Products
-                        </li>
-                        <li class="flex items-center gap-3 text-slate-700">
-                            <span class="material-symbols-outlined text-[#ea3e69]">check_circle</span>
-                            State-of-the-art Equipment
-                        </li>
-                    </ul>
-                    <a href="/pages/about.html" class="mt-4 text-[#ea3e69] font-bold hover:text-[#d12a52] flex items-center gap-1 w-fit group">
-                        Learn More About Us
-                        <span class="material-symbols-outlined transition-transform group-hover:translate-x-1 text-[20px]">arrow_forward</span>
+                    <div class="space-y-4">
+                        <img alt="Salon interior waiting area" class="rounded-2xl w-full h-64 object-cover shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlwxMo8WGQroCTiPlsYri-cBRgP2GLD3esMtDTD8jjbdTYjMPLHBVym63RKST2rf5-SHcsosx0Hb7CV5RfWEiSEkIMc2j8BzNc7JRvDjIf2dBxUKxxY1fz24kTelF8DEknaSleGe0We4iV8n-vHwnVt1B6apGBhMMV7x1VdypxmZrjWi890ZsndU_i1wl8upZGdmTVvGpnDUSs8ceYW3pR-MSlpXL8F2zMapiyr8oO3OnlZx1jmY44BaTkBv8qaWbuExEmU1FoRGR-"/>
+                        <img alt="Facial treatment close up" class="rounded-2xl w-full h-48 object-cover shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMYNTnQB_g9KrHSS8k2Q7TO1l6bPCrW_OgjBOYABaG2bygMm5OcMT-sgD50X2MVz5fG7REnAaIQovvm2Pyne2OmegC5YxSCYFPN1PFFYvhWGaao93Ns0JKqCYqbHA-fCvAjnxxrrsmXsB9vfXoXdoTigIW01Mp-LjgUOqsPdQ2ndo8tJdEdwE4KtMgZ9Raq_qn9STm8K6h84-go6VnLrVwzOq_FgiaH4pFQzfCkq4ab9EFp1NVG7_a-5Uw9WhleF2bmtJ2X2vhECog"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials -->
+    <section class="py-20 bg-background-light dark:bg-background-dark relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl translate-x-1/3 translate-y-1/3 pointer-events-none"></div>
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">Client Stories</h2>
+                <div class="flex justify-center gap-1 text-primary">
+                    <span class="material-symbols-outlined text-2xl fill-current">star</span>
+                    <span class="material-symbols-outlined text-2xl fill-current">star</span>
+                    <span class="material-symbols-outlined text-2xl fill-current">star</span>
+                    <span class="material-symbols-outlined text-2xl fill-current">star</span>
+                    <span class="material-symbols-outlined text-2xl fill-current">star</span>
+                </div>
+                <p class="mt-2 text-slate-600 dark:text-slate-400">Rated 5.0/5.0 by our beloved customers</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-white dark:bg-[#2a1a1c] p-8 rounded-2xl shadow-sm border border-primary/5">
+                    <p class="text-slate-600 dark:text-slate-300 italic mb-6">"The best facial I've ever had! The staff was incredibly knowledgeable and the atmosphere was so relaxing. My skin feels amazing."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-slate-200 overflow-hidden">
+                            <img alt="Sarah Johnson" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnliwvGeFIznrgVNsuHwrpnLSCgmM7dtm4zoDtWHs1zsUo5pMWcsCSfRJG8r3fsfqQ0DySryCtkSY_VxWeBZOKMP97qX6onNo78yGwaojIaInGmeGiozPf4YYbU2H7ns232-uH4NI2SUO32n4C08Eb3rYlPpwKZs8_KEvUJ_18eR2AP2tm6Aw_OvFkXz0d0pAVmXnliKihVA2MwQlE4vIPaf_Osb7J1RAoH-gIxfP8_xQxl2ydtO08kGCaAssYdkVQHT1yno4AuYet"/>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-slate-900 dark:text-white text-sm">Sarah Johnson</h5>
+                            <p class="text-xs text-slate-500">Regular Client</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Review 2 -->
+                <div class="bg-white dark:bg-[#2a1a1c] p-8 rounded-2xl shadow-sm border border-primary/5 transform md:-translate-y-4">
+                    <p class="text-slate-600 dark:text-slate-300 italic mb-6">"Gowyiow is my go-to place for self-care. The team is professional, and the salon is spotless. Highly recommend their hair services!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-slate-200 overflow-hidden">
+                            <img alt="Emily Davis" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0OcdD63TRMc1QkHCUYn0M_jF2Kj4nMgtDdclZXf1rR8WNnhuHaPF9ofCzzchCg6PK6ELl9auYoNtNGpfz6Dyl5q7xBw6vfLtV5CbJe9Dw3zW7h4ogGPqI5qUTr1J3o0tuGbpCNkbx6amx-B7cfERHN59dd8WXZqyDdVBunQ07vUHQDz9PFSvTAJXMFxzSjp2bXFmIbUwaLv8CtK3IX4gjjtJdO8hTCpxR6RLVsihUYPw_1TIEHZAz7UzOI96krCgJcL-pCRhcLYsC"/>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-slate-900 dark:text-white text-sm">Emily Davis</h5>
+                            <p class="text-xs text-slate-500">VIP Member</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Review 3 -->
+                <div class="bg-white dark:bg-[#2a1a1c] p-8 rounded-2xl shadow-sm border border-primary/5">
+                    <p class="text-slate-600 dark:text-slate-300 italic mb-6">"Absolutely wonderful experience. From the moment you walk in, you feel pampered. The prices are very reasonable for the luxury service."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-slate-200 overflow-hidden">
+                            <img alt="Jessica Lee" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfrgshyvoNaDmvBc9d_bjgapBPFnQH4Nu8x4CRrsuSO-0nI0QsCBzpFYLPDyrZy5zrkfSQ0HcOl79wUtReu3_LmNsKb5Fkk4tKfc6N46nU5gjTXyKnI8RFaMFXGf1et1yFskFQgRXgQCUTnjVko-4tq1UQb-Bh_onvlJlRgKDdCjMCIBTXA0AGQcZKMBpi-LS-74P5MmffbpaukotRYM0Ddyqa2TeMxYqO4fDy6ogr6kOEZY7rrK4y-ConUYOUtbJ6VpGZvBV56iIY"/>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-slate-900 dark:text-white text-sm">Jessica Lee</h5>
+                            <p class="text-xs text-slate-500">First-time Visitor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Location & CTA -->
+    <section class="py-20 bg-primary text-white relative">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-8 relative z-10 flex flex-col md:flex-row gap-12 items-center">
+            <div class="flex-1 text-center md:text-left">
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-6">Ready to Glow?</h2>
+                <p class="text-white/90 text-lg mb-8 max-w-lg mx-auto md:mx-0">Book your appointment today and take the first step towards a more radiant you. We are located in the heart of Tombura.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <button class="bg-white text-primary hover:bg-slate-100 h-12 px-8 rounded-xl text-base font-bold shadow-lg transition-transform hover:scale-105">
+                        Book Now
+                    </button>
+                    <a href="./contact.html" class="bg-transparent border border-white hover:bg-white/10 text-white h-12 px-8 rounded-xl text-base font-bold transition-all flex items-center justify-center">
+                        Contact Us
                     </a>
                 </div>
             </div>
-        </section>
-
-        <!-- Services Grid -->
-        <section class="py-20 bg-[#ea3e69]/5 border-y border-[#ea3e69]/5">
-            <div class="max-w-7xl mx-auto px-4 sm:px-8">
-                <div class="text-center max-w-2xl mx-auto mb-16">
-                    <span class="text-[#ea3e69] font-bold tracking-wider text-sm uppercase mb-2 block">Our Menu</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4 font-serif">Our Exclusive Services</h2>
-                    <p class="text-slate-600">Discover a range of treatments designed to relax, restore, and revitalize.</p>
-                </div>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Service 1 -->
-                    <div class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl hover:shadow-[#ea3e69]/10 transition-all duration-300 border border-transparent hover:border-[#ea3e69]/20">
-                        <div class="h-48 rounded-xl overflow-hidden mb-6 relative">
-                            <div class="absolute inset-0 bg-[#ea3e69]/10 group-hover:bg-transparent transition-colors z-10"></div>
-                            <img alt="Woman relaxing with facial mask" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWWpOBDxD9Sje2i_PVCib3Y2fbjCnCYqt-ahWMSFPN34GRd-0JvjG3qNMQE97Nc6eVpGHhI1PPO2_kZfQc3-PH_s-AVH4HEfooNHiVEFqBhW4OXPw-2aDpnDdP6eu4Yyz3w_QcixkuF1iK3rxtEjQnnT5Wu1rzqdBZewj5Aw_n86kK--emCd0mgC18tk9s68k8nmHnkMXjdPdYVleEp1HIcMS2eKfQvdza4o-dMZfe4nX4BmFqBgiy0vKU8DI95puvrht1qik9OAvn" />
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2 font-serif">Signature Facials</h3>
-                        <p class="text-slate-600 mb-4 line-clamp-3">Deep cleansing and hydration treatments tailored to your specific skin type for a radiant glow.</p>
-                        <a href="/pages/services.html" class="inline-flex items-center text-[#ea3e69] font-semibold text-sm hover:underline">View Details</a>
-                    </div>
-                    <!-- Service 2 -->
-                    <div class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl hover:shadow-[#ea3e69]/10 transition-all duration-300 border border-transparent hover:border-[#ea3e69]/20">
-                        <div class="h-48 rounded-xl overflow-hidden mb-6 relative">
-                            <div class="absolute inset-0 bg-[#ea3e69]/10 group-hover:bg-transparent transition-colors z-10"></div>
-                            <img alt="Hair styling session" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKlaZHB1nzImWTjTHhl-H5PuP_IUU0toFIIXaZotkhY_dHjTg624dcLX7TyKyn93WQ5nEDoURGolFFk44RHxU7R-3PITLRs6YkLiIi6e_G0103LLSY0w26KaWEBbBFZl4JN2Nal_mafAONfu5y4DBZ03KDUXtTqgZ5e_0il_D7AtFBq8IftIbbz100B-avaOrhSx_vTitA4q0vx7lUnXXfUYOQXtWU8yAQiysNpFPYnxcUiSrVz9d0yNcpJmZmfKv25tSEGgklizEi" />
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2 font-serif">Hair Styling & Care</h3>
-                        <p class="text-slate-600 mb-4 line-clamp-3">From cuts and colors to deep conditioning treatments, let our experts transform your look.</p>
-                        <a href="/pages/services.html" class="inline-flex items-center text-[#ea3e69] font-semibold text-sm hover:underline">View Details</a>
-                    </div>
-                    <!-- Service 3 -->
-                    <div class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl hover:shadow-[#ea3e69]/10 transition-all duration-300 border border-transparent hover:border-[#ea3e69]/20">
-                        <div class="h-48 rounded-xl overflow-hidden mb-6 relative">
-                            <div class="absolute inset-0 bg-[#ea3e69]/10 group-hover:bg-transparent transition-colors z-10"></div>
-                            <img alt="Manicure and nail art" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqumsN_YVTwOJDVybSfb42wBOZOmVXBr8X1zdlMOZFUv0RlBU3YkdtC-YIoukFTrZYUo_Jowb9vNv4mdtb2iVQ91uFTPCTHrkGhqc-4Zw1YTylowB2Ku-ZjrN0rT20tvbtmrPGT67egQmLvw_hOlZbHmTsGGn4gWgLcm5MFZoY89Zs4caH5R9ntkbbxlY_rZANKn0TXKelvkZho0RrzJGnzwYs4Hmj2tfMDbZIAzEN0-2G4s3Q0n1kZYixzYIs6J4qQEBJvcrt4i1j" />
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2 font-serif">Nail Artistry</h3>
-                        <p class="text-slate-600 mb-4 line-clamp-3">Pamper your hands and feet with our luxurious manicures, pedicures, and nail art services.</p>
-                        <a href="/pages/services.html" class="inline-flex items-center text-[#ea3e69] font-semibold text-sm hover:underline">View Details</a>
-                    </div>
+            <div class="flex-1 w-full h-[300px] bg-slate-200 rounded-2xl overflow-hidden shadow-2xl relative">
+                <img alt="Map location of Tombura" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAscXpogXedC1qrt6wT-pt-BSa7VSLD3AkuXcoh-81xy4EYyXtN29GaQshRbuzbY2d-DxBMRKutQCPufz9qLNU_HcO5eDzTATvS_Xqz5C4CearsfjxwO2Cq1Ad2EKOhZ39Dk1VjSAiFfpURP22SoNjnGYmryleoy6Lk6vApmf6h8JvYyNfHI4DCSpg64DW3yuGIvEk9c-V4ZSVkNNIv6INU_FsaCrht8BdOfyJ0HyyD-PgNJ4VzTl2_zS7riUX0n7gP_kD19WI1AO4u"/>
+                <div class="absolute inset-0 bg-black/10 flex items-center justify-center">
+                    <span class="bg-white text-slate-900 px-4 py-2 rounded-lg text-sm font-bold shadow-md flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary">location_on</span>
+                        View on Google Maps
+                    </span>
                 </div>
             </div>
-        </section>
-
-        <!-- Location & CTA -->
-        <section class="py-20 bg-[#ea3e69] text-white relative">
-            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-            <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10 flex flex-col md:flex-row gap-12 items-center">
-                <div class="flex-1 text-center md:text-left">
-                    <h2 class="text-3xl md:text-5xl font-extrabold mb-6 font-serif">Ready to Glow?</h2>
-                    <p class="text-white/90 text-lg mb-8 max-w-lg mx-auto md:mx-0">Book your appointment today and take the first step towards a more radiant you. We are located in the heart of Tombura.</p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                        <a href="/pages/contact.html" class="bg-white text-[#ea3e69] hover:bg-slate-100 h-12 px-8 rounded-xl text-base font-bold shadow-lg transition-transform hover:scale-105 flex items-center justify-center">
-                            Book Now
-                        </a>
-                        <a href="/pages/contact.html" class="bg-transparent border border-white hover:bg-white/10 text-white h-12 px-8 rounded-xl text-base font-bold transition-all flex items-center justify-center">
-                            Contact Us
-                        </a>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-background-dark text-slate-300 py-12 border-t border-slate-800">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-1">
+                    <div class="flex items-center gap-2 mb-4 text-white">
+                        <div class="size-6 text-primary">
+                            <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                <path clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h2 class="text-xl font-bold">Gowyiow</h2>
+                    </div>
+                    <p class="text-sm text-slate-400 mb-4">Luxury skincare and beauty salon dedicated to bringing out your inner radiance.</p>
+                    <div class="flex gap-4">
+                        <a class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors" href="#"><span class="text-xs">FB</span></a>
+                        <a class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors" href="#"><span class="text-xs">IG</span></a>
+                        <a class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors" href="#"><span class="text-xs">WA</span></a>
                     </div>
                 </div>
-                <div class="flex-1 w-full h-[300px] bg-slate-200 rounded-2xl overflow-hidden shadow-2xl relative">
-                    <img alt="Map location of Tombura" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAscXpogXedC1qrt6wT-pt-BSa7VSLD3AkuXcoh-81xy4EYyXtN29GaQshRbuzbY2d-DxBMRKutQCPufz9qLNU_HcO5eDzTATvS_Xqz5C4CearsfjxwO2Cq1Ad2EKOhZ39Dk1VjSAiFfpURP22SoNjnGYmryleoy6Lk6vApmf6h8JvYyNfHI4DCSpg64DW3yuGIvEk9c-V4ZSVkNNIv6INU_FsaCrht8BdOfyJ0HyyD-PgNJ4VzTl2_zS7riUX0n7gP_kD19WI1AO4u" />
-                    <div class="absolute inset-0 bg-black/10 flex items-center justify-center">
-                        <span class="bg-white text-slate-900 px-4 py-2 rounded-lg text-sm font-bold shadow-md flex items-center gap-2">
-                            <span class="material-symbols-outlined text-[#ea3e69]">location_on</span>
-                            View on Google Maps
-                        </span>
-                    </div>
+                <div>
+                    <h3 class="text-white font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="./index.html" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="./about.html" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="./services.html" class="hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="./gallery.html" class="hover:text-primary transition-colors">Gallery</a></li>
+                        <li><a href="./contact.html" class="hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-4">Services</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="./services.html" class="hover:text-primary transition-colors">Facials</a></li>
+                        <li><a href="./services.html" class="hover:text-primary transition-colors">Massage Therapy</a></li>
+                        <li><a href="./services.html" class="hover:text-primary transition-colors">Hair Styling</a></li>
+                        <li><a href="./services.html" class="hover:text-primary transition-colors">Manicure &amp; Pedicure</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-4">Contact Info</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+                            <span>123 Main Street, Tombura,<br/>South Sudan</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-lg">call</span>
+                            <span>+123 456 7890</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-lg">mail</span>
+                            <span>info@gowyiow.com</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </section>
-    </main>
-
-    <app-footer></app-footer>
-
+            <div class="border-t border-slate-800 pt-8 text-center text-xs text-slate-500">
+                <p>© 2023 Gowyiow Skincare &amp; Salon. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
     <!-- Floating WhatsApp Button -->
     <a aria-label="Chat on WhatsApp" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-3 rounded-full shadow-lg hover:scale-110 transition-transform flex items-center justify-center group" href="#">
         <span class="absolute right-full mr-2 bg-white text-slate-800 text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-sm font-medium">Chat with us</span>
-        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <svg class="size-8" fill="currentColor" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
             <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.017-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path>
         </svg>
     </a>
 </body>
 </html>
+

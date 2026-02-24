@@ -1,20 +1,16 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Gowyiow Skincare & Salon
 
-# Run and deploy your AI Studio app
+A luxury skincare and salon services website.
 
-This contains everything you need to run your app locally.
+## Deployment to GitHub Pages
 
-View your app in AI Studio: https://ai.studio/apps/13d50cc6-b263-44ff-8223-5ee18e8306ef
+This project is built using pure static files (HTML, CSS, JavaScript) and is ready to be deployed to GitHub Pages without any build steps.
 
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### Steps to Deploy:
+1. Push this repository to GitHub.
+2. Go to your repository **Settings**.
+3. Navigate to **Pages** in the left sidebar.
+4. Under **Build and deployment**, select **Deploy from a branch**.
+5. Select the `main` branch and the `/ (root)` folder.
+6. Click **Save**.
+7. Your site will be live at `https://<username>.github.io/<repository-name>/`.

@@ -1,0 +1,19 @@
+/* Custom scrollbar for better aesthetics */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f8f8f6; 
+}
+::-webkit-scrollbar-thumb {
+    background: #dcdcdc; 
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #ecb613; 
+}
+
+/* Custom utility for serif headings to match luxury aesthetic */
+.font-serif {
+    font-family: 'Playfair Display', serif;
+}
