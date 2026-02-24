@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gowyiow Skincare - Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans:wght@400;500;700&family=Noto+Serif:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/components.js" defer></script>
+</head>
+<body class="bg-[#fcf8f9] text-[#1b0e11] antialiased">
+    <app-header></app-header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img alt="Luxury spa interior with soft lighting" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlP00WvysSrrKVNnF6asWpW4rjuQtRw4DmSwpqLAOW-ZWKuP5nZXeBrSU5yjcH2fxYKlJvcdwu3tCrKttsFP29hdqo8rKVbgq238PXlS6AoC2uUdN82ni0QfKJJTCzyyOocZg4WyaioB3dbDgLArbRGtYsQzWULuX0e6dnxeWgYT0ilu0DzySFeUs_eNtbTdoomAzbOqFUXEA18JIRdgdZX9Mh-xJ0w8up23Vl6-MA_CLPvcYj2f1Q9Rtm-CcKqowf4azPR3UvC0kH" />
+                <div class="absolute inset-0 bg-gradient-to-r from-[#1b0e11]/70 to-[#1b0e11]/40 mix-blend-multiply"></div>
+            </div>
+            <div class="relative z-10 text-center max-w-3xl px-6 animate-fade-in-up">
+                <h1 class="text-white font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-sm">
+                    Our Work & Salon Experience
+                </h1>
+                <p class="text-gray-200 text-lg md:text-xl font-light mb-8 max-w-2xl mx-auto">
+                    Immerse yourself in luxury and witness the transformation. From rejuvenating facials to expert styling.
+                </p>
+                <div class="flex justify-center gap-4">
+                    <a href="/pages/services.html" class="bg-[#ea3e69] hover:bg-white hover:text-[#ea3e69] transition-all duration-300 text-white font-bold py-3 px-8 rounded-xl text-base shadow-lg flex items-center gap-2">
+                        <span>View Treatments</span>
+                        <span class="material-symbols-outlined text-sm">arrow_downward</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Introduction & Filter -->
+        <section class="py-16 px-4 bg-[#fcf8f9]">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-[#1b0e11] font-serif text-3xl md:text-4xl font-bold mb-4">See the Results. Feel the Confidence.</h2>
+                    <p class="text-gray-600 text-base md:text-lg leading-relaxed">
+                        Explore our portfolio of transformative skincare treatments, exquisite hair styling, and professional makeup services. Every image represents our commitment to quality, care, and your radiant confidence.
+                    </p>
+                </div>
+                <!-- Filter Tabs -->
+                <div class="flex flex-wrap justify-center gap-3 mb-12">
+                    <button class="px-6 py-2.5 rounded-full bg-[#ea3e69] text-white font-semibold text-sm shadow-sm transition-all hover:bg-[#d12a52] ring-2 ring-[#ea3e69] ring-offset-2 ring-offset-[#fcf8f9]">
+                        All
+                    </button>
+                    <button class="px-6 py-2.5 rounded-full bg-white border border-gray-200 text-gray-600 font-medium text-sm hover:bg-gray-50 hover:border-gray-300 transition-all">
+                        Skincare
+                    </button>
+                    <button class="px-6 py-2.5 rounded-full bg-white border border-gray-200 text-gray-600 font-medium text-sm hover:bg-gray-50 hover:border-gray-300 transition-all">
+                        Before & After
+                    </button>
+                    <button class="px-6 py-2.5 rounded-full bg-white border border-gray-200 text-gray-600 font-medium text-sm hover:bg-gray-50 hover:border-gray-300 transition-all">
+                        Hair Services
+                    </button>
+                    <button class="px-6 py-2.5 rounded-full bg-white border border-gray-200 text-gray-600 font-medium text-sm hover:bg-gray-50 hover:border-gray-300 transition-all">
+                        Makeup
+                    </button>
+                    <button class="px-6 py-2.5 rounded-full bg-white border border-gray-200 text-gray-600 font-medium text-sm hover:bg-gray-50 hover:border-gray-300 transition-all">
+                        Environment
+                    </button>
+                </div>
+                <!-- Masonry Grid -->
+                <div class="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
+                    <!-- Gallery Item 1 -->
+                    <div class="group relative overflow-hidden rounded-2xl break-inside-avoid shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                        <img alt="Woman receiving facial treatment" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXl05--poxDHjZdPMsjbQ4-IsD0WK21E2jifO5BrxJurXNPBTLPN0PutQl9Ltv9DcbnG3qJDtU1xUsBLtjoGjaYsHKyNg15-j90saQruU4xvl5QJHqLC4uM9xzMI3j6YL6w5QE650r98pmI_L4y97ZPD6-g4B98TYpgRJ61r3h4XxA9dufrATKZSipYbiIFzL4SOnrx3BAG9oohdN8lNRdrv61O3tmB82M-3W2PKYEViBU-zNm-IAxt3VZ3_frzOm7RTZAicrm_fHJ" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-[#ea3e69] text-xs font-bold uppercase tracking-wider mb-1">Skincare</span>
+                            <h3 class="text-white font-serif text-lg font-semibold">Hydrating Facial</h3>
+                            <button class="absolute top-4 right-4 bg-white/20 backdrop-blur-md p-2 rounded-full text-white hover:bg-white hover:text-[#ea3e69] transition-colors">
+                                <span class="material-symbols-outlined text-xl">open_in_full</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Gallery Item 2 -->
+                    <div class="group relative overflow-hidden rounded-2xl break-inside-avoid shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                        <img alt="Interior of modern salon with mirrors" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsNrcFwjo1l5EbaDkNE9xbq1Tv7SbmsiEdwV0qBM1EZSMArmzBeurKImLG3G_ZzuhYTzYgdDJTarbutR_Y8fdO-PdHeop1VF8xxVlXuUVRO9oihduaxGR70zGC3H_fbo46LX-Hu6rp2YkI6N40_nINSoXVKd5uvjHMvQ6C5AiYoA-TOZ-IeIAyHo70sNEvsmyHFtprtFrJfcvBVdFUsUkGFOZHbfI47bAffaeBE8g0SESfWYiB3j9_pARBPm6F53E42XBICnUJ30Ze" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-[#ea3e69] text-xs font-bold uppercase tracking-wider mb-1">Environment</span>
+                            <h3 class="text-white font-serif text-lg font-semibold">Main Salon Area</h3>
+                            <button class="absolute top-4 right-4 bg-white/20 backdrop-blur-md p-2 rounded-full text-white hover:bg-white hover:text-[#ea3e69] transition-colors">
+                                <span class="material-symbols-outlined text-xl">open_in_full</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Gallery Item 3 -->
+                    <div class="group relative overflow-hidden rounded-2xl break-inside-avoid shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                        <img alt="Close up of woman with glowing skin" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd7EgHfbTBglW6QnMFFZYMHOyCqj9Hy_bWd45b2DVni9tFkDjN0oonkdvdRCEGD3_tLEdFG3G3a6nFL6F1iq7Ya_nsa249y3SzlHYF2VCNUBfs5U4n3zmbeHB3bY_SqmWQfNIxjKfR8hp5T-SNqt5Zr41NV_9YKK40rmafC5-0-87fxRHYdoMwRH3iGIVzyqMg2kOeuX56djtiohw13QGhaf9cXbiAgTcQPE0AumRNt9aGyBzTrO3urC_c79p75eNrG9Y70LpNv0hb" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-[#ea3e69] text-xs font-bold uppercase tracking-wider mb-1">Results</span>
+                            <h3 class="text-white font-serif text-lg font-semibold">Glow Treatment</h3>
+                            <button class="absolute top-4 right-4 bg-white/20 backdrop-blur-md p-2 rounded-full text-white hover:bg-white hover:text-[#ea3e69] transition-colors">
+                                <span class="material-symbols-outlined text-xl">open_in_full</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Gallery Item 4 -->
+                    <div class="group relative overflow-hidden rounded-2xl break-inside-avoid shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                        <img alt="Hair stylist working on client" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPNueORv4E5QdkgLfFseXcGAlR204M0qKzDMv12NDyi43g4v041H2teOJD2xDn3w5bhYZLkRjVA_n6Zq8V9Oz2c4adb8_gHQUDf3RA2sLm41eMvYBmiwyyL55jgZYzDgj9qRHUqsEJvNxjDpKzVL5qmNY4jXORPQGTD89rmr27zPdlzJcHg_G0yXvu8sQyhw3JvE1cKQ51Dg0IaeOEUsxO7wIVREajt_78jT9zF3_g5O4exJoVzWrUKNPsCUfKxyfSutX91TKGyz_I" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-[#ea3e69] text-xs font-bold uppercase tracking-wider mb-1">Hair</span>
+                            <h3 class="text-white font-serif text-lg font-semibold">Color & Style</h3>
+                            <button class="absolute top-4 right-4 bg-white/20 backdrop-blur-md p-2 rounded-full text-white hover:bg-white hover:text-[#ea3e69] transition-colors">
+                                <span class="material-symbols-outlined text-xl">open_in_full</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Gallery Item 5 -->
+                    <div class="group relative overflow-hidden rounded-2xl break-inside-avoid shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                        <img alt="Beauty products displayed elegantly" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZMh0kLK9PrM5VWtRPKK9099WdxqE8_kDqxQeHbbulao0YJgiV2t1SS58Eljlr-IlmpCptDSFpaQjX64wG-MLPa8qRLpTV-ia9Tqltb2xuvxgLh9lrG_8Fkf450JSssa76J0j3xccyhWDVJ70yYLKiXo5IKFQaYZlvln19svXQU2GLJqcX36ZHMY2-2WVogbRaCtd5lH-LedB_5_MRuzYnG2z6YICOMeowLVNtffAfJEIGSNmYj8EAFAh5thwSBYIgTZ0aSKInXxpp" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-[#ea3e69] text-xs font-bold uppercase tracking-wider mb-1">Products</span>
+                            <h3 class="text-white font-serif text-lg font-semibold">Premium Oils</h3>
+                            <button class="absolute top-4 right-4 bg-white/20 backdrop-blur-md p-2 rounded-full text-white hover:bg-white hover:text-[#ea3e69] transition-colors">
+                                <span class="material-symbols-outlined text-xl">open_in_full</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Gallery Item 6 -->
+                    <div class="group relative overflow-hidden rounded-2xl break-inside-avoid shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                        <img alt="Makeup artist applying lipstick" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqFtqV7f_hBVfZtpyuUxkEKHq15JGNXnEEcHGOCo4tbHCvk5W8WUQd9gmz-Wpo5dy-2SAbhNMKeobDxIBLavDi9qA5DflDp1i-AngEc7-Vf6bJqSGryE0PG1HiRgHu2b1s8-35J8-8P05u_qKiF0NqFPSGibz-xO0laWibteaZqgyR0c4N6tO0_6p1II20gisTJ1wHP5z1LyrqrTfBYbXmMp1xOysDwTM8HXcWafXQ_EK93do4goSGqzFUaDLPxyYTOZHE2JS7RqN_" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-[#ea3e69] text-xs font-bold uppercase tracking-wider mb-1">Makeup</span>
+                            <h3 class="text-white font-serif text-lg font-semibold">Bridal Makeup</h3>
+                            <button class="absolute top-4 right-4 bg-white/20 backdrop-blur-md p-2 rounded-full text-white hover:bg-white hover:text-[#ea3e69] transition-colors">
+                                <span class="material-symbols-outlined text-xl">open_in_full</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Gallery Item 7 -->
+                    <div class="group relative overflow-hidden rounded-2xl break-inside-avoid shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                        <img alt="Relaxing spa setting with stones and towel" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQy2HDzA1EEKxwVrsjHMGgvNLSqXEfi4fkv1Gr7r5eBbD4P0DOWhgGZqmLp6GwgIyumJasTWKNvaW-kMbOvVudYgY_xVojEMGZpkTf0AxiWhObGz6edZ4xmGN8KtlA5VGbNRxvJLzb9Y_vuigCr5wz9zyV1cFuRp2_vluiea7hfs3vKG4inDGb57jSNVrMZOOnnUgjBpsilZsaSqv5SN_v0hxsUJh39tyYuw9JYImr1Ty0dToJh7VKxMO24ewfivikg2JkseX4UaTx" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-[#ea3e69] text-xs font-bold uppercase tracking-wider mb-1">Environment</span>
+                            <h3 class="text-white font-serif text-lg font-semibold">Relaxation Room</h3>
+                            <button class="absolute top-4 right-4 bg-white/20 backdrop-blur-md p-2 rounded-full text-white hover:bg-white hover:text-[#ea3e69] transition-colors">
+                                <span class="material-symbols-outlined text-xl">open_in_full</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Gallery Item 8 -->
+                    <div class="group relative overflow-hidden rounded-2xl break-inside-avoid shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                        <img alt="Stylist washing hair" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzwe8lczwug0yK8MbzHYEZ8Zxy3FKr4lODJ49SVpfncZ198si3O_SFDI1fhjKLaXK14clbzAR-Xm3g8GBM30XNEtDk0a3HjXSK4uQESG2yOcKG5Ih2zpqQhUcHvVtHml7qqwJV1PZkc8Eq7r-eDd-BcaYhveSoJdJrQ8I3WgQ6YtqvDI39lkPRM9ZgS8nOmVCmGDtTmO-L5MpBOp3jPUwY8XfAO7SrbnSIcebQTHA-XcnB7YcKRlL17oeBXItOX1qsOKc1lPP6JgNT" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-[#ea3e69] text-xs font-bold uppercase tracking-wider mb-1">Hair</span>
+                            <h3 class="text-white font-serif text-lg font-semibold">Scalp Treatment</h3>
+                            <button class="absolute top-4 right-4 bg-white/20 backdrop-blur-md p-2 rounded-full text-white hover:bg-white hover:text-[#ea3e69] transition-colors">
+                                <span class="material-symbols-outlined text-xl">open_in_full</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Load More Button -->
+                <div class="mt-16 text-center">
+                    <button class="inline-flex items-center justify-center gap-2 px-8 py-3 bg-white border border-[#ea3e69]/30 text-[#1b0e11] font-semibold rounded-xl hover:bg-[#ea3e69]/5 hover:border-[#ea3e69] transition-all group">
+                        Load More Photos
+                        <span class="material-symbols-outlined text-[#ea3e69] group-hover:translate-y-1 transition-transform">expand_more</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-[#ea3e69]/10">
+            <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-10">
+                <div class="flex-1 text-left">
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-[#1b0e11] mb-4">Ready to start your journey?</h2>
+                    <p class="text-gray-600 text-lg">Book your consultation today and let our experts guide you to your perfect look.</p>
+                </div>
+                <div class="flex-shrink-0">
+                    <a href="/pages/contact.html" class="bg-[#ea3e69] hover:bg-[#d12a52] transition-colors text-white font-bold py-4 px-10 rounded-xl text-lg shadow-lg inline-block">
+                        Book Appointment
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <app-footer></app-footer>
+</body>
+</html>

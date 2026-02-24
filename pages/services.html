@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gowyiow Skincare - Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans:wght@400;500;700&family=Noto+Serif:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/components.js" defer></script>
+</head>
+<body class="bg-[#fcf8f9] text-[#1b0e11] antialiased">
+    <app-header></app-header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative">
+            <div class="relative flex min-h-[500px] flex-col items-center justify-center p-8 text-center bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuCSSli3RFhbEnXx7lWN8p-fEP85w2uFsYvxwNu4Rq9lB_28SKILW6tPL5nJABEjIecQrb6s9-ucN4RGtaXfa7KFbcqqC2DKp6Fkx8AALkSpl0PIi8sxtl01MRSRAAdpVjsvBzFgMFFHR5s5QRhuTbRXt8LP0Z1MsaUFzE2257wDUsgs_HkV1HtIMlFXnl7fom4u7EztProxeBQELeIuLyfCAi11LmowuchGdJu06-WvqzavCE2fmbqrHSZX2TMdUN-gSSVg6-p4jngU')">
+                <div class="max-w-[800px] flex flex-col gap-6 animate-fade-in-up">
+                    <h1 class="text-white text-4xl md:text-6xl font-bold leading-tight font-serif drop-shadow-md">
+                        Our Professional Skincare & Salon Services
+                    </h1>
+                    <p class="text-white/90 text-lg md:text-xl font-normal leading-relaxed max-w-2xl mx-auto drop-shadow-sm">
+                        Experience the pinnacle of luxury and rejuvenation with our curated treatments tailored just for you.
+                    </p>
+                    <div class="flex flex-wrap gap-4 justify-center mt-4">
+                        <a href="/pages/contact.html" class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-full h-12 px-6 bg-[#ea3e69] text-white text-base font-bold hover:bg-[#d12a52] transition-all duration-300 shadow-lg shadow-[#ea3e69]/30">
+                            Book Appointment
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Introduction -->
+        <section class="py-16 px-4 md:px-20 bg-[#fcf8f9]">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-slate-900 font-serif">Beauty & Skincare Services Designed for You</h2>
+                <div class="w-24 h-1 bg-[#ea3e69] mx-auto mb-6 rounded-full"></div>
+                <p class="text-slate-600 text-lg leading-relaxed">
+                    Discover our range of professional treatments tailored to enhance your natural beauty and restore your skin's radiance. We use only premium products for lasting results, ensuring every visit leaves you feeling refreshed and revitalized.
+                </p>
+            </div>
+        </section>
+
+        <!-- Skincare Services Grid -->
+        <section class="py-12 px-4 md:px-10 lg:px-20 bg-white">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex items-center gap-4 mb-10">
+                    <span class="material-symbols-outlined text-4xl text-[#ea3e69]">spa</span>
+                    <h2 class="text-3xl font-bold text-slate-900 font-serif">Skincare Treatments</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="group flex flex-col bg-[#fcf8f9] rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:shadow-[#ea3e69]/10 transition-all duration-300 border border-[#ea3e69]/10">
+                        <div class="h-48 overflow-hidden relative">
+                            <img alt="Woman receiving facial treatment" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb4q5bfPuyPtjuK9gocnQQHYJqiC3LF1HR4eLZxpXh7Y1QQqPCFu3QzCeyJmJXBtJAe_8QuKZ-Y6lK24uAmWveL3SUPb4ZgzcAS6TdmrrdtKe9IWxszMFIzo8THBNUF1V1dX0sIRbtjPPCrnXeLpTgO4lozCgcm-OOGqMKRm11_Wdx4gicOVaESPAZFjEo40d_AiIt4i_fbPlTPDAdJPpy0WtebQOoTZapxnfmpoxCjhcy_R4wMIJsGIQIEexw7eeVRGSRvk1Vy-1U" />
+                        </div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-xl font-bold mb-2 text-slate-900 font-serif">Facial Treatments</h3>
+                            <p class="text-slate-500 text-sm mb-6 flex-1 line-clamp-3">Rejuvenate your skin with our signature facials designed to hydrate and revitalize.</p>
+                            <a href="/pages/contact.html" class="w-full py-2 rounded-lg border border-[#ea3e69] text-[#ea3e69] font-bold hover:bg-[#ea3e69] hover:text-white transition-colors text-sm text-center block">
+                                Book Now
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="group flex flex-col bg-[#fcf8f9] rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:shadow-[#ea3e69]/10 transition-all duration-300 border border-[#ea3e69]/10">
+                        <div class="h-48 overflow-hidden relative">
+                            <img alt="Dermatologist examining skin" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvR3LovB7YckFRNo_NO-F0xzvhbP2m5J-pM6T11HcZEYH37VZVtbJtAZQ2GlwhldtGJm-2PDJKKBcoJYPF-lSNfzPPtzoqAXkzRKJtdkpLCbTy55DGEOQrXhSw3wA5oQ6AdiJlWTOl2i8Rz8sg84LuFjw8VFV0ij4HKwdMmzu4PXRwdHJKzCuMi-IiYiTFJSPNb3XESb6ZMaxmFdR9Z5WAQFfEA8ARpZShKmo9NYcf_jls3bcWVEEZWNB0WwzpQmqWt1kEkmqBMOBC" />
+                        </div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-xl font-bold mb-2 text-slate-900 font-serif">Acne Treatment</h3>
+                            <p class="text-slate-500 text-sm mb-6 flex-1 line-clamp-3">Specialized solutions to clear breakouts and prevent future acne effectively.</p>
+                            <a href="/pages/contact.html" class="w-full py-2 rounded-lg border border-[#ea3e69] text-[#ea3e69] font-bold hover:bg-[#ea3e69] hover:text-white transition-colors text-sm text-center block">
+                                Book Now
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="group flex flex-col bg-[#fcf8f9] rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:shadow-[#ea3e69]/10 transition-all duration-300 border border-[#ea3e69]/10">
+                        <div class="h-48 overflow-hidden relative">
+                            <img alt="Skin brightening serum application" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW2E7ZkP1Ke7rsYJLF4zuG3vS1eGSyaJg---mNKdXZfPTcB1S0vsJYWnV-e6v_K2uIjLiMQT0aW28EisrmwT9Rm1VVhSjy1RlPx1yOZ0W8EGPi1M_qpzVV_7fhLKP9qKHSvExyPBtKzeF2pEA6t4MSKxFyWsMef79wv5fGC4MimGlCuezO6P8_IDoaoeizpVVEfl38J2zTs1AIL9I_Ancp8kW-wtdboVLKG_3VsW7H4gh9QvY3noXfOmIqWtSQF0eO_BT5bT7q8Bop" />
+                        </div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-xl font-bold mb-2 text-slate-900 font-serif">Skin Brightening</h3>
+                            <p class="text-slate-500 text-sm mb-6 flex-1 line-clamp-3">Achieve a radiant glow with our safe and effective brightening therapies.</p>
+                            <a href="/pages/contact.html" class="w-full py-2 rounded-lg border border-[#ea3e69] text-[#ea3e69] font-bold hover:bg-[#ea3e69] hover:text-white transition-colors text-sm text-center block">
+                                Book Now
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Service Card 4 -->
+                    <div class="group flex flex-col bg-[#fcf8f9] rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:shadow-[#ea3e69]/10 transition-all duration-300 border border-[#ea3e69]/10">
+                        <div class="h-48 overflow-hidden relative">
+                            <img alt="Deep pore cleansing procedure" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh6rBUjEjE8DuteFI8RojmikPR7Udj-3czVKUMtuMS_V5VC7m1O-TVnueK260XJ3tKwVpjKtDx8_nLHxWPn7dO52-OlUK15-18ozOsrDEdSHlcGCWR8u_Pvs5sG8DN66SJy_2RhWYAkQ_B3LcFy9bWsW-jTXLNVRNWR0KXmyEm8V1Vt8h94sRd0cJZ8i74u7B5TwesJbfgdcbOScDApxoWpq8TvGf7ceiMIPbkBp4acShAwrHrj7kdDwS3MgZ6jjTcen7rt0pKuLEo" />
+                        </div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-xl font-bold mb-2 text-slate-900 font-serif">Deep Skin Cleaning</h3>
+                            <p class="text-slate-500 text-sm mb-6 flex-1 line-clamp-3">Purify your pores and remove impurities for a smoother, clearer complexion.</p>
+                            <a href="/pages/contact.html" class="w-full py-2 rounded-lg border border-[#ea3e69] text-[#ea3e69] font-bold hover:bg-[#ea3e69] hover:text-white transition-colors text-sm text-center block">
+                                Book Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hair Services Section -->
+        <section class="py-16 px-4 md:px-10 lg:px-20 bg-[#fcf8f9]">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex items-center gap-4 mb-10">
+                    <span class="material-symbols-outlined text-4xl text-[#ea3e69]">content_cut</span>
+                    <h2 class="text-3xl font-bold text-slate-900 font-serif">Hair Services</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Hair Card 1 -->
+                    <div class="flex flex-col md:flex-row bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-[#ea3e69]/10 group">
+                        <div class="w-full md:w-2/5 h-48 md:h-auto relative overflow-hidden">
+                            <img alt="Professional hair styling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ16KRMpnQRTyfWn4R0__ZPyTSEqjwd9rNhnlmsKsSi6DnFr10wdwGjoSzEORPnaoyjg4Ps2t2JDzdrBz7bj7dQuoJx-qNLQNLdYwxIXzaSHNbv4r9I6d-bVZMTLCb2OD58Zadge_qyh52Yku1qxdqQ51gyDQh9FsHCqSvAWXtDZwBO9nuX-LK0BCvqn2OjigVSheKChED0PTajU2NoGax-Gvc76kKzb9z7NWWS3RLFxv4O5qix7uPq2mVboRAATSyTcuSMh4HMITJ" />
+                        </div>
+                        <div class="p-6 flex flex-col flex-1 justify-center">
+                            <h3 class="text-xl font-bold mb-2 text-slate-900 font-serif">Hair Styling</h3>
+                            <p class="text-slate-500 text-sm mb-4">Cuts, blowouts, and styling for any occasion.</p>
+                            <a href="/pages/contact.html" class="self-start text-[#ea3e69] font-bold text-sm hover:underline flex items-center gap-1">
+                                Book Service <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Hair Card 2 -->
+                    <div class="flex flex-col md:flex-row bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-[#ea3e69]/10 group">
+                        <div class="w-full md:w-2/5 h-48 md:h-auto relative overflow-hidden">
+                            <img alt="Hair treatment application" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGaVo08nXDVpj0GJvMRnBGX_h8rhd7ATel0MNi0lmljY7xY8ZwykdaaQRk_dezbxt-6DRKywrCdPyb8Tx3kygdvEAxLYc3sYE9-QBUUfwIFzMIMTB7BADlXtyZ6sSpIquqk9y6-DvECiSSwCfGmSexH6StXeH3JXL-d1xYxmHm9tmUphV6YSYCvYWn1EeONTZ72QQ1PnWnLLi788As14zzWXFqfOeRYeWo2Choev5MXqtUYdoPScYFYU9m6zG1CRh3tYsSxzLwf0xQ" />
+                        </div>
+                        <div class="p-6 flex flex-col flex-1 justify-center">
+                            <h3 class="text-xl font-bold mb-2 text-slate-900 font-serif">Hair Treatment</h3>
+                            <p class="text-slate-500 text-sm mb-4">Repair damage and restore shine with deep conditioning.</p>
+                            <a href="/pages/contact.html" class="self-start text-[#ea3e69] font-bold text-sm hover:underline flex items-center gap-1">
+                                Book Service <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Hair Card 3 -->
+                    <div class="flex flex-col md:flex-row bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-[#ea3e69]/10 group">
+                        <div class="w-full md:w-2/5 h-48 md:h-auto relative overflow-hidden">
+                            <img alt="Various hair care products" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKD2bx5n7n_lFlok6wlHL7njlGS-LpOXOHFMDdt9U_xEId5VB8N5lWj32WGLuBh7sste7lEXFgDXXnCnQGNNE5y463niayeScGQXwQLPAXdSeuyoUtyAS1rA2lgnmGXuPXLHRBTy_vjWeGdht1cmt_Fzo4HkL28AgWhl7l39sCiWUCKXlLLYKb6d4YqzToUsiJCjVY_GX72tnCnxbKc0geGf4Ejd6MGo3ihU5uiPtDCXqGQ5effyBBUCJ7aP_ANfjlvLR4tPlLfmZm" />
+                        </div>
+                        <div class="p-6 flex flex-col flex-1 justify-center">
+                            <h3 class="text-xl font-bold mb-2 text-slate-900 font-serif">Hair Care</h3>
+                            <p class="text-slate-500 text-sm mb-4">Consultation and routines for maintaining healthy hair.</p>
+                            <a href="/pages/contact.html" class="self-start text-[#ea3e69] font-bold text-sm hover:underline flex items-center gap-1">
+                                Book Service <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="py-20 px-4 md:px-20 bg-[#fcf8f9] relative overflow-hidden">
+            <div class="absolute -top-20 -left-20 w-64 h-64 bg-[#ea3e69]/5 rounded-full blur-3xl"></div>
+            <div class="max-w-5xl mx-auto text-center relative z-10">
+                <h2 class="text-3xl font-bold mb-16 text-slate-900 font-serif">How We Transform Your Beauty</h2>
+                <div class="relative flex flex-col md:flex-row justify-between items-center gap-12 md:gap-4">
+                    <div class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-[#ea3e69]/30 to-transparent -z-10"></div>
+                    <!-- Step 1 -->
+                    <div class="flex flex-col items-center gap-4 bg-[#fcf8f9] p-4 z-10 w-full md:w-1/3">
+                        <div class="w-24 h-24 rounded-full bg-[#ea3e69]/10 border-2 border-[#ea3e69] flex items-center justify-center text-[#ea3e69] shadow-lg shadow-[#ea3e69]/10">
+                            <span class="material-symbols-outlined text-4xl">clinical_notes</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">1. Consultation</h3>
+                        <p class="text-slate-500 text-sm max-w-[240px]">We analyze your skin and hair needs to create a personalized plan.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="flex flex-col items-center gap-4 bg-[#fcf8f9] p-4 z-10 w-full md:w-1/3">
+                        <div class="w-24 h-24 rounded-full bg-[#ea3e69]/10 border-2 border-[#ea3e69] flex items-center justify-center text-[#ea3e69] shadow-lg shadow-[#ea3e69]/10">
+                            <span class="material-symbols-outlined text-4xl">hotel_class</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">2. Treatment</h3>
+                        <p class="text-slate-500 text-sm max-w-[240px]">Relax while our experts apply premium products and techniques.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="flex flex-col items-center gap-4 bg-[#fcf8f9] p-4 z-10 w-full md:w-1/3">
+                        <div class="w-24 h-24 rounded-full bg-[#ea3e69]/10 border-2 border-[#ea3e69] flex items-center justify-center text-[#ea3e69] shadow-lg shadow-[#ea3e69]/10">
+                            <span class="material-symbols-outlined text-4xl">auto_awesome</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">3. Visible Results</h3>
+                        <p class="text-slate-500 text-sm max-w-[240px]">Walk out feeling confident with immediate, glowing results.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <app-footer></app-footer>
+</body>
+</html>
