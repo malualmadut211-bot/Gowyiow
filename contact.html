@@ -13,7 +13,7 @@
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#ea3e69",
+                        "primary": "#DBAC58",
                         "background-light": "#fcf8f9",
                         "background-dark": "#211115",
                     },
@@ -31,25 +31,21 @@
 </head>
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-sans transition-colors duration-200">
     <!-- Navigation -->
-    <header class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-primary/10">
+    <header class="sticky top-0 z-50 bg-[#F5DBB5]/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-primary/10">
         <div class="max-w-[1280px] mx-auto px-4 sm:px-8 py-4 flex items-center justify-between">
-            <div class="flex items-center gap-2">
-                <div class="size-8 text-primary">
-                    <span class="material-symbols-outlined text-3xl">spa</span>
-                </div>
-                <h1 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white font-display">Gowyiow Skincare</h1>
-            </div>
+            <a href="./index.html" class="flex items-center gap-2">
+                <img src="https://github.com/malualmadut211-bot/ai-studio-media/blob/158b7ac9bc5c866d5b8150520f3f4a67bb06c0e8/G%20logo.png?raw=true" alt="Gowyiow Logo" class="h-10 w-auto">
+            </a>
             <nav class="hidden md:flex gap-8 items-center">
                 <a class="text-sm font-medium hover:text-primary transition-colors" href="./index.html">Home</a>
                 <a class="text-sm font-medium hover:text-primary transition-colors" href="./about.html">About</a>
                 <a class="text-sm font-medium hover:text-primary transition-colors" href="./services.html">Services</a>
-                <a class="text-sm font-medium hover:text-primary transition-colors" href="./gallery.html">Gallery</a>
                 <a class="text-sm font-medium text-primary transition-colors" href="./contact.html">Contact</a>
             </nav>
             <div class="flex items-center gap-4">
-                <button class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-xl text-sm font-bold transition-transform hover:scale-105 shadow-lg shadow-primary/20">
+                <a href="tel:+211920705250" class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-xl text-sm font-bold transition-transform hover:scale-105 shadow-lg shadow-primary/20">
                     Book Now
-                </button>
+                </a>
                 <button class="md:hidden text-slate-900 dark:text-white">
                     <span class="material-symbols-outlined">menu</span>
                 </button>
@@ -81,8 +77,8 @@
                     <span class="material-symbols-outlined text-3xl">call</span>
                 </div>
                 <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white font-display">Call Us</h3>
-                <p class="text-gray-500 dark:text-gray-400 mb-6">+1 (555) 123-4567</p>
-                <button class="text-primary font-bold text-sm uppercase tracking-wider hover:underline decoration-2 underline-offset-4">Call Now</button>
+                <p class="text-gray-500 dark:text-gray-400 mb-6">+211920705250</p>
+                <a href="tel:+211920705250" class="text-primary font-bold text-sm uppercase tracking-wider hover:underline decoration-2 underline-offset-4">Call Now</a>
             </div>
             <!-- WhatsApp Card -->
             <div class="bg-white dark:bg-[#2a161b] p-8 rounded-xl shadow-xl shadow-gray-200/50 dark:shadow-black/30 border border-primary/20 flex flex-col items-center text-center group hover:-translate-y-1 transition-transform duration-300">
@@ -91,7 +87,7 @@
                 </div>
                 <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white font-display">WhatsApp</h3>
                 <p class="text-gray-500 dark:text-gray-400 mb-6">Chat for quick bookings</p>
-                <button class="text-primary font-bold text-sm uppercase tracking-wider hover:underline decoration-2 underline-offset-4">Message Us</button>
+                <a href="https://wa.me/211928882267" class="text-primary font-bold text-sm uppercase tracking-wider hover:underline decoration-2 underline-offset-4">Message Us</a>
             </div>
             <!-- Location Card -->
             <div class="bg-white dark:bg-[#2a161b] p-8 rounded-xl shadow-xl shadow-gray-200/50 dark:shadow-black/30 border border-primary/20 flex flex-col items-center text-center group hover:-translate-y-1 transition-transform duration-300">
@@ -99,7 +95,7 @@
                     <span class="material-symbols-outlined text-3xl">location_on</span>
                 </div>
                 <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white font-display">Visit Us</h3>
-                <p class="text-gray-500 dark:text-gray-400 mb-6">123 Luxury Lane, Tombura</p>
+                <p class="text-gray-500 dark:text-gray-400 mb-6">Tombura road Opposite Super Gas Station</p>
                 <button class="text-primary font-bold text-sm uppercase tracking-wider hover:underline decoration-2 underline-offset-4">Get Directions</button>
             </div>
         </div>
@@ -174,13 +170,96 @@
         </div>
     </section>
 
+    <!-- Map Section -->
+    <section class="relative w-full h-[400px] bg-[#eef0f0] flex items-center justify-center overflow-hidden">
+        <!-- Map Pin -->
+        <div class="w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center relative z-10">
+            <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+        </div>
+        
+        <!-- Location Card -->
+        <div class="absolute bottom-8 left-8 bg-white p-4 rounded-xl shadow-lg z-10">
+            <h4 class="font-bold text-slate-900 text-sm">Gowyiow Skincare</h4>
+            <p class="text-slate-500 text-xs mt-1">Tombura road Opposite Super Gas Station</p>
+        </div>
+    </section>
+
+    <!-- Prefer to Chat Section -->
+    <section class="py-24 px-4 bg-primary/5 text-center flex flex-col items-center">
+        <span class="bg-primary/20 text-primary text-xs font-bold px-4 py-1.5 rounded-full tracking-wider uppercase mb-6">Quick Support</span>
+        <h2 class="text-4xl md:text-5xl font-display font-bold text-slate-900 mb-6">Prefer to chat?</h2>
+        <p class="text-slate-600 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+            Connect with our reception desk instantly via WhatsApp for bookings, price inquiries, and free skin consultations.
+        </p>
+        <a href="https://wa.me/211928882267" class="bg-[#25D366] hover:bg-[#20bd5a] text-white px-8 py-4 rounded-full font-bold text-lg transition-colors flex items-center gap-3 shadow-lg shadow-[#25D366]/30">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Chat on WhatsApp
+        </a>
+    </section>
+
     <!-- Footer -->
-    <footer class="bg-background-light dark:bg-black text-slate-900 dark:text-gray-300 pt-16 pb-8 border-t border-primary/20">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
-                <p>© 2023 Gowyiow Skincare. All rights reserved.</p>
+    <footer class="bg-[#F5DBB5] dark:bg-background-dark text-slate-800 dark:text-slate-300 py-12 border-t border-primary/20 dark:border-slate-800">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-1">
+                    <div class="flex items-center gap-2 mb-4 text-slate-900 dark:text-white">
+                        <img src="https://github.com/malualmadut211-bot/ai-studio-media/blob/158b7ac9bc5c866d5b8150520f3f4a67bb06c0e8/G%20logo.png?raw=true" alt="Gowyiow Logo" class="h-8 w-auto">
+                        <h2 class="text-xl font-bold">Gowyiow</h2>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Luxury skincare and beauty salon dedicated to bringing out your inner radiance.</p>
+                    <div class="flex gap-4">
+                        <a class="w-8 h-8 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors" href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg" alt="Facebook" class="w-4 h-4 dark:invert"></a>
+                        <a class="w-8 h-8 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors" href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram" class="w-4 h-4 dark:invert"></a>
+                        <a class="w-8 h-8 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors" href="https://wa.me/211928882267"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/whatsapp.svg" alt="WhatsApp" class="w-4 h-4 dark:invert"></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-slate-900 dark:text-white font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="./index.html" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="./about.html" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="./services.html" class="hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="./contact.html" class="hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-slate-900 dark:text-white font-bold mb-4">Services</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="./services.html" class="hover:text-primary transition-colors">Facials</a></li>
+                        <li><a href="./services.html" class="hover:text-primary transition-colors">Massage Therapy</a></li>
+                        <li><a href="./services.html" class="hover:text-primary transition-colors">Hair Styling</a></li>
+                        <li><a href="./services.html" class="hover:text-primary transition-colors">Manicure &amp; Pedicure</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-slate-900 dark:text-white font-bold mb-4">Contact Info</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+                            <span>Tombura road Opposite Super Gas Station</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-lg">call</span>
+                            <a href="tel:+211920705250" class="hover:text-primary transition-colors">+211920705250</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-lg">mail</span>
+                            <span>info@gowyiow.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-primary/20 dark:border-slate-800 pt-8 text-center text-xs text-slate-500">
+                <p>© 2026 Gowyiow Skincare &amp; Salon. All rights reserved.</p>
             </div>
         </div>
     </footer>
+    <!-- Floating WhatsApp Button -->
+    <a aria-label="Chat on WhatsApp" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-3 rounded-full shadow-lg hover:scale-110 transition-transform flex items-center justify-center group" href="https://wa.me/211928882267">
+        <span class="absolute right-full mr-2 bg-white text-slate-800 text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-sm font-medium">Chat with us</span>
+        <svg class="size-8" fill="currentColor" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.017-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path>
+        </svg>
+    </a>
 </body>
 </html>

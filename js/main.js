@@ -26,4 +26,27 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+
+    // Smooth Scroll Animations
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Add reveal class to all sections if not already present
+    document.querySelectorAll('section').forEach(section => {
+        section.classList.add('reveal');
+        section.classList.add('section-hover');
+        observer.observe(section);
+    });
 });
