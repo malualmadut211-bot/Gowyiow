@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Contact Us - Gowyiow Skincare & Salon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ea3e69",
+                        "background-light": "#fcf8f9",
+                        "background-dark": "#211115",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/main.js" defer></script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-sans transition-colors duration-200">
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-primary/10">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-8 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="size-8 text-primary">
+                    <span class="material-symbols-outlined text-3xl">spa</span>
+                </div>
+                <h1 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white font-display">Gowyiow Skincare</h1>
+            </div>
+            <nav class="hidden md:flex gap-8 items-center">
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="./index.html">Home</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="./about.html">About</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="./services.html">Services</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="./gallery.html">Gallery</a>
+                <a class="text-sm font-medium text-primary transition-colors" href="./contact.html">Contact</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <button class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-xl text-sm font-bold transition-transform hover:scale-105 shadow-lg shadow-primary/20">
+                    Book Now
+                </button>
+                <button class="md:hidden text-slate-900 dark:text-white">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-[480px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA58P2TofJIEjdxkBhnlwWbpR_EEqX7J65skq2YO0Ew6hrma-gPVAHBtGPQZbW0B3TVL_PgqgJOpvS1Txtpvyh0ss0On98946leHPgGGyujXOzSsVyEGEcj_ta6ETvGqQua68vRMZ_ElMEreuvZMgBtaCtcHoxFjLxo-HsdFwmlBqXksOsHix8DrlM6FbmKRVfrIAOGJPkeVl-3ujtM9bf2xRmqHI1i_iTQyUzBnN0RhIc24FSTAQoiGNocEt6A7psUU1DAzEtCqw52');"></div>
+        <div class="absolute inset-0 bg-background-dark/30 dark:bg-black/60 backdrop-brightness-75 mix-blend-multiply"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-background-light dark:from-background-dark to-transparent"></div>
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-black text-white mb-4 tracking-tight drop-shadow-md font-display">
+                Contact Gowyiow Skincare &amp; Salon
+            </h1>
+            <p class="text-lg md:text-xl text-white/90 font-light max-w-2xl mx-auto">
+                Experience luxury skincare and beauty treatments. We are here to assist you on your journey to radiance.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Info Cards -->
+    <section class="py-16 px-4 -mt-20 relative z-20">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Phone Card -->
+            <div class="bg-white dark:bg-[#2a161b] p-8 rounded-xl shadow-xl shadow-gray-200/50 dark:shadow-black/30 border border-primary/20 flex flex-col items-center text-center group hover:-translate-y-1 transition-transform duration-300">
+                <div class="w-14 h-14 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined text-3xl">call</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white font-display">Call Us</h3>
+                <p class="text-gray-500 dark:text-gray-400 mb-6">+1 (555) 123-4567</p>
+                <button class="text-primary font-bold text-sm uppercase tracking-wider hover:underline decoration-2 underline-offset-4">Call Now</button>
+            </div>
+            <!-- WhatsApp Card -->
+            <div class="bg-white dark:bg-[#2a161b] p-8 rounded-xl shadow-xl shadow-gray-200/50 dark:shadow-black/30 border border-primary/20 flex flex-col items-center text-center group hover:-translate-y-1 transition-transform duration-300">
+                <div class="w-14 h-14 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined text-3xl">chat_bubble</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white font-display">WhatsApp</h3>
+                <p class="text-gray-500 dark:text-gray-400 mb-6">Chat for quick bookings</p>
+                <button class="text-primary font-bold text-sm uppercase tracking-wider hover:underline decoration-2 underline-offset-4">Message Us</button>
+            </div>
+            <!-- Location Card -->
+            <div class="bg-white dark:bg-[#2a161b] p-8 rounded-xl shadow-xl shadow-gray-200/50 dark:shadow-black/30 border border-primary/20 flex flex-col items-center text-center group hover:-translate-y-1 transition-transform duration-300">
+                <div class="w-14 h-14 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined text-3xl">location_on</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white font-display">Visit Us</h3>
+                <p class="text-gray-500 dark:text-gray-400 mb-6">123 Luxury Lane, Tombura</p>
+                <button class="text-primary font-bold text-sm uppercase tracking-wider hover:underline decoration-2 underline-offset-4">Get Directions</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content: Form & Business Info -->
+    <section class="py-12 px-4 md:px-8 max-w-7xl mx-auto w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+            <!-- Contact Form -->
+            <div class="flex flex-col justify-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white font-display">Send Us a Message</h2>
+                <p class="text-gray-600 dark:text-gray-300 mb-10 text-lg">
+                    Have a question about our services or want to book a special treatment? Fill out the form below.
+                </p>
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-sm font-semibold text-slate-900 dark:text-gray-200" for="name">Full Name</label>
+                            <input class="w-full px-4 py-3 rounded-lg border-primary/20 bg-white dark:bg-[#2a161b] dark:border-gray-700 focus:border-primary focus:ring-primary dark:text-white shadow-sm" id="name" placeholder="Jane Doe" type="text"/>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-semibold text-slate-900 dark:text-gray-200" for="phone">Phone Number</label>
+                            <input class="w-full px-4 py-3 rounded-lg border-primary/20 bg-white dark:bg-[#2a161b] dark:border-gray-700 focus:border-primary focus:ring-primary dark:text-white shadow-sm" id="phone" placeholder="+1 (555) 000-0000" type="tel"/>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-semibold text-slate-900 dark:text-gray-200" for="service">Service Interest</label>
+                        <div class="relative">
+                            <select class="w-full px-4 py-3 rounded-lg border-primary/20 bg-white dark:bg-[#2a161b] dark:border-gray-700 focus:border-primary focus:ring-primary dark:text-white shadow-sm appearance-none" id="service">
+                                <option>Facial Treatment</option>
+                                <option>Body Massage</option>
+                                <option>Manicure &amp; Pedicure</option>
+                                <option>Consultation</option>
+                                <option>Other</option>
+                            </select>
+                            <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500">expand_more</span>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-semibold text-slate-900 dark:text-gray-200" for="message">Your Message</label>
+                        <textarea class="w-full px-4 py-3 rounded-lg border-primary/20 bg-white dark:bg-[#2a161b] dark:border-gray-700 focus:border-primary focus:ring-primary dark:text-white shadow-sm resize-none" id="message" placeholder="Tell us how we can help..." rows="4"></textarea>
+                    </div>
+                    <button class="w-full bg-slate-900 hover:bg-black dark:bg-primary dark:hover:bg-[#d12a52] text-white font-bold py-4 px-8 rounded-xl transition-all shadow-lg hover:shadow-xl mt-4" type="button">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+            <!-- Business Hours & FAQ -->
+            <div class="flex flex-col gap-10">
+                <!-- Hours -->
+                <div class="bg-primary/5 dark:bg-[#2a161b]/50 rounded-2xl p-8 border border-primary/20">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-3 text-slate-900 dark:text-white font-display">
+                        <span class="material-symbols-outlined text-primary">schedule</span>
+                        Business Hours
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center border-b border-gray-200 dark:border-gray-700 pb-2">
+                            <span class="text-gray-600 dark:text-gray-300 font-medium">Monday - Friday</span>
+                            <span class="text-slate-900 dark:text-white font-bold">9:00 AM - 8:00 PM</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-200 dark:border-gray-700 pb-2">
+                            <span class="text-gray-600 dark:text-gray-300 font-medium">Saturday</span>
+                            <span class="text-slate-900 dark:text-white font-bold">10:00 AM - 6:00 PM</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 dark:text-gray-300 font-medium">Sunday</span>
+                            <span class="text-primary font-bold">Closed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-background-light dark:bg-black text-slate-900 dark:text-gray-300 pt-16 pb-8 border-t border-primary/20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+                <p>© 2023 Gowyiow Skincare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

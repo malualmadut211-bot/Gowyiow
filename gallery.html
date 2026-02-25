@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Gallery - Gowyiow Skincare & Salon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ecb613",
+                        "background-light": "#fcfbf8",
+                        "background-dark": "#1b180d",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/main.js" defer></script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-sans transition-colors duration-200">
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-primary/10">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-8 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="size-8 text-primary">
+                    <span class="material-symbols-outlined text-3xl">spa</span>
+                </div>
+                <h1 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white font-display">Gowyiow Skincare</h1>
+            </div>
+            <nav class="hidden md:flex gap-8 items-center">
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="./index.html">Home</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="./about.html">About</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="./services.html">Services</a>
+                <a class="text-sm font-medium text-primary transition-colors" href="./gallery.html">Gallery</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="./contact.html">Contact</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <button class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-xl text-sm font-bold transition-transform hover:scale-105 shadow-lg shadow-primary/20">
+                    Book Now
+                </button>
+                <button class="md:hidden text-slate-900 dark:text-white">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img alt="Luxury spa interior with soft lighting" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlP00WvysSrrKVNnF6asWpW4rjuQtRw4DmSwpqLAOW-ZWKuP5nZXeBrSU5yjcH2fxYKlJvcdwu3tCrKttsFP29hdqo8rKVbgq238PXlS6AoC2uUdN82ni0QfKJJTCzyyOocZg4WyaioB3dbDgLArbRGtYsQzWULuX0e6dnxeWgYT0ilu0DzySFeUs_eNtbTdoomAzbOqFUXEA18JIRdgdZX9Mh-xJ0w8up23Vl6-MA_CLPvcYj2f1Q9Rtm-CcKqowf4azPR3UvC0kH"/>
+            <div class="absolute inset-0 bg-gradient-to-r from-background-dark/70 to-background-dark/40 mix-blend-multiply"></div>
+        </div>
+        <div class="relative z-10 text-center max-w-3xl px-6 animate-fade-in-up">
+            <h1 class="text-white font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-sm">
+                Our Work &amp; Salon Experience
+            </h1>
+            <p class="text-gray-200 text-lg md:text-xl font-light mb-8 font-sans max-w-2xl mx-auto">
+                Immerse yourself in luxury and witness the transformation. From rejuvenating facials to expert styling.
+            </p>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="py-16 px-4 bg-background-light dark:bg-background-dark">
+        <div class="max-w-[1280px] mx-auto">
+            <div class="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
+                <!-- Gallery Item 1 -->
+                <div class="group relative overflow-hidden rounded-2xl break-inside-avoid shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <img alt="Woman receiving facial treatment" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXl05--poxDHjZdPMsjbQ4-IsD0WK21E2jifO5BrxJurXNPBTLPN0PutQl9Ltv9DcbnG3qJDtU1xUsBLtjoGjaYsHKyNg15-j90saQruU4xvl5QJHqLC4uM9xzMI3j6YL6w5QE650r98pmI_L4y97ZPD6-g4B98TYpgRJ61r3h4XxA9dufrATKZSipYbiIFzL4SOnrx3BAG9oohdN8lNRdrv61O3tmB82M-3W2PKYEViBU-zNm-IAxt3VZ3_frzOm7RTZAicrm_fHJ"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Skincare</span>
+                        <h3 class="text-white font-display text-lg font-semibold">Hydrating Facial</h3>
+                    </div>
+                </div>
+                <!-- Gallery Item 2 -->
+                <div class="group relative overflow-hidden rounded-2xl break-inside-avoid shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <img alt="Interior of modern salon with mirrors" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsNrcFwjo1l5EbaDkNE9xbq1Tv7SbmsiEdwV0qBM1EZSMArmzBeurKImLG3G_ZzuhYTzYgdDJTarbutR_Y8fdO-PdHeop1VF8xxVlXuUVRO9oihduaxGR70zGC3H_fbo46LX-Hu6rp2YkI6N40_nINSoXVKd5uvjHMvQ6C5AiYoA-TOZ-IeIAyHo70sNEvsmyHFtprtFrJfcvBVdFUsUkGFOZHbfI47bAffaeBE8g0SESfWYiB3j9_pARBPm6F53E42XBICnUJ30Ze"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Environment</span>
+                        <h3 class="text-white font-display text-lg font-semibold">Main Salon Area</h3>
+                    </div>
+                </div>
+                <!-- Gallery Item 3 -->
+                <div class="group relative overflow-hidden rounded-2xl break-inside-avoid shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <img alt="Close up of woman with glowing skin" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd7EgHfbTBglW6QnMFFZYMHOyCqj9Hy_bWd45b2DVni9tFkDjN0oonkdvdRCEGD3_tLEdFG3G3a6nFL6F1iq7Ya_nsa249y3SzlHYF2VCNUBfs5U4n3zmbeHB3bY_SqmWQfNIxjKfR8hp5T-SNqt5Zr41NV_9YKK40rmafC5-0-87fxRHYdoMwRH3iGIVzyqMg2kOeuX56djtiohw13QGhaf9cXbiAgTcQPE0AumRNt9aGyBzTrO3urC_c79p75eNrG9Y70LpNv0hb"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Results</span>
+                        <h3 class="text-white font-display text-lg font-semibold">Glow Treatment</h3>
+                    </div>
+                </div>
+                <!-- Gallery Item 4 -->
+                <div class="group relative overflow-hidden rounded-2xl break-inside-avoid shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <img alt="Hair stylist working on client" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPNueORv4E5QdkgLfFseXcGAlR204M0qKzDMv12NDyi43g4v041H2teOJD2xDn3w5bhYZLkRjVA_n6Zq8V9Oz2c4adb8_gHQUDf3RA2sLm41eMvYBmiwyyL55jgZYzDgj9qRHUqsEJvNxjDpKzVL5qmNY4jXORPQGTD89rmr27zPdlzJcHg_G0yXvu8sQyhw3JvE1cKQ51Dg0IaeOEUsxO7wIVREajt_78jT9zF3_g5O4exJoVzWrUKNPsCUfKxyfSutX91TKGyz_I"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Hair</span>
+                        <h3 class="text-white font-display text-lg font-semibold">Color &amp; Style</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-background-dark text-white pt-16 pb-8 border-t border-white/10">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm text-center md:text-left">
+                    © 2023 Gowyiow Skincare &amp; Salon. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
